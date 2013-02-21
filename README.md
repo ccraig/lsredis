@@ -1,7 +1,7 @@
 lsredis
 ========
 
-[Lemonstand](http://lemonstand.com/) Redis module. Uses the [Predis](https://github.com/nrk/predis "Predis") library ( version 0.8.3 ) to allow Redis as an option for caching in Lemonstand.
+[Lemonstand](http://lemonstand.com/) [Redis](http://redis.io/) module. Uses the [Predis](https://github.com/nrk/predis "Predis") library ( version 0.8.3 ) to allow Redis as an option for caching in Lemonstand.
 
 
 ## Installation ##
