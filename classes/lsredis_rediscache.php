@@ -19,10 +19,8 @@ class LsRedis_RedisCache extends Core_CacheBase
       throw new Phpr_SystemException('Predis is missing.');
     
     $this->ttl = isset($params['TTL']) ? $params['TTL'] : 0;
-    
-    $servers = isset($params['SERVERS']) ? $params['SERVERS'] : array();
-
-    $config = array();
+    $servers   = isset($params['SERVERS']) ? $params['SERVERS'] : array();
+    $config    = array();
 
     foreach ($servers as $server)
     {
@@ -30,7 +28,7 @@ class LsRedis_RedisCache extends Core_CacheBase
       if ($pos === false)
         throw new Phpr_SystemException('Invalid redis server specifier. Please use the following format: 192.168.0.1:11211');
         
-      $ip = substr($server, 0, $pos);
+      $ip   = substr($server, 0, $pos);
       $port = substr($server, $pos+1);
 
       $server_conf = array(
@@ -59,8 +57,7 @@ class LsRedis_RedisCache extends Core_CacheBase
     if ($ttl === null)
       $ttl = $this->ttl;
 
-    $key = $this->fix_key( $key );
-
+    $key   = $this->fix_key( $key );
     $value = serialize( $value );
 
     try
